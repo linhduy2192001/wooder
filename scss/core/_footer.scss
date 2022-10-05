@@ -1,0 +1,36 @@
+.footer{
+    padding: 20px 0px;
+    background-color: $black-cl;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+    &__year{
+        @include text(12px,fmain,normal,$gray-cl,none);
+        letter-spacing: 0.6px;
+    }
+    &__btnback{
+        @include text(12px,fmain,normal,$gray-cl,uppercase);
+        letter-spacing: 0.6px;
+    }
+    
+    @include xs{
+        .container{
+            flex-direction: column;
+            .logo{
+                margin: 20px auto;
+                position: initial   ;
+                left: initial;
+                @include transform(initial);
+
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.textbox{
+    --wBefore:80px;
+
+    .heading{
+        @include text(40px,pb,normal,$black-cl,uppercase);
+        margin-bottom: 15px;
+        letter-spacing: 2.8px;
+        position: relative;
+        &:before{
+            content: "";
+            display: block;
+            width: var(--wBefore);
+            height: 2px;
+            background: $black-cl;
+            top: 50%;
+            left: -93px;
+            position: absolute;
+        }
+    }
+    .desc{
+        @include text(16px,fmain,22px,$gray-cl,none);
+        overflow-wrap: break-word;
+        letter-spacing: 0.4px;
+    }
+    @include sm{
+        .heading{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+.title{
+    @include text(18px,pb,normal,$gray-cl,uppercase);
+}
+.para{
+    @include text(15px,fmain,20px,$gray-cl,none);
+}
+.name{
+    @include text(16px,fmain,20px,$gray-cl,none);
+}
+a{
+    text-decoration: none;
+    
+}

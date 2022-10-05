@@ -1,0 +1,33 @@
+.btnlearnmore{
+    @include text(14px,pb,58px,$black-cl,uppercase);
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    .icon{
+        align-items: center;
+        margin-left: 9px;
+    }
+    &:after{
+        content: "";
+        display: block;
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        left: 0;
+        bottom:11px;
+        position: absolute;
+
+    }
+    .icon{
+        @include transform(translateX(0px));
+        @include transition($t);
+
+    }
+    &:hover{
+        .icon{
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
+    }
+   
+}

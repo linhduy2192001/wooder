@@ -1,0 +1,80 @@
+*{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth:antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+
+html,
+body{
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing:antialiased;
+    margin:auto;
+    @include text(16px,pb,22px,$gray-cl,captilize);
+    background:$white-cl;
+    position: relative;
+    scroll-behavior: smooth;
+    --pdSection:90px;
+    main{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        section{
+            &.pd{
+                padding:var(--pdSection) 0px;
+            }
+        }
+    }
+    .container-fluid{
+        padding-right: 30px;
+        padding-left:30px;
+        margin-right: auto;
+        margin-left:auto;
+        position: relative;
+    }
+
+    .container{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width:576px){
+        .container{
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width:768px){
+        .container{
+            max-width: 720px;
+        }
+    }
+    //tablet
+    @media (min-width:992px) {
+        .container{
+            max-width: 960px;
+        }
+    }
+
+    //desktop
+    @media (min-width:1200px) {
+        .container{
+            max-width: $container-width;
+        }
+    }
+    @include xs{
+
+    }
+    @include sm{
+        --pdSection:70px;
+    }
+}
