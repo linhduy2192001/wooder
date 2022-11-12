@@ -692,7 +692,8 @@
         &-item{
             height: 40px;
             padding:10px 20px;
-            background: gray;
+            background: black;
+            color: azure;
             cursor: pointer;
             @include transition($t);
             &:not(:last-child){
@@ -700,10 +701,11 @@
             }
             &.active{
                 background: $yellow-cl;
-                color: $white-cl;
+                color: $black-cl;
             }
             &:hover{
                 background: $yellow-cl;
+                color: $black-cl;
                 @include transition($t);
             }
         }
